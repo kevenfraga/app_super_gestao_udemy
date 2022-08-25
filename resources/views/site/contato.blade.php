@@ -9,13 +9,24 @@
 
         <div class="informacao-pagina">
             <div class="contato-principal">
-                @component('site.layouts._components.form_contato', ['class' => 'borda-preta'])
+                @component('site.layouts._components.form_contato', ['class' => 'borda-preta', 'motivo_contatos' => $motivo_contatos])
                     <p>A nossa esquipe analisará a sua mensagem e retornaremos o mais brevemente possível!</p>
                     <p>Nosso tempo médio de resposta é de 48 horas.</p>
                 @endcomponent
             </div>
         </div>
     </div>
+
+    {{-- @if($errors->any())
+        <div style="width: 100%; background: red">
+            <pre>
+                @foreach ($errors->all() as $key => $erro)
+                    {{ $erro }}
+                    <br>
+                @endforeach
+            </pre>
+        </div>
+    @endif --}}
 
     <div class="rodape">
         <div class="redes-sociais">

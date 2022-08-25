@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PrincipalController@index')->name('site.index');
 Route::get('/sobre-nos', 'SobreNosController@index')->name('site.sobrenos');
 Route::get('/contato', 'ContatoController@index')->name('site.contato');
-Route::post('/contato', 'ContatoController@index')->name('site.contato');
+Route::post('/contato', 'ContatoController@salvar')->name('site.contato');
 Route::get('/login', function(){ return 'Login';})->name('site.login');
 
 Route::prefix('/app')->group(function(){
