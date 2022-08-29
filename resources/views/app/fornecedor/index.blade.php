@@ -2,7 +2,6 @@
 
 @isset($fornecedores)
     @forelse ($fornecedores as $indice => $fornecedor)
-    @dd($loop)
         Interação atual: {{ $loop->iteration }}
         <br>
         Fornecedor: {{ $fornecedor['nome'] }}
